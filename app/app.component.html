@@ -2,4 +2,21 @@
 <div [style.color]="nameColor">
     Hello {{name}}
 </div>
+
+
+<!-- The difference between the one way binding (brutal way)-->
+<div>
+    <label for="brutalWay">The brutal way: </label>
+    <input name="brutalWay" type="text" 
+    [value]="name" 
+    (keyup.enter)="name = $event.target.value"/>
+</div>
+
+<!-- And the two way binding (the right way) -->
+<!-- Note: Special attetion to the "banana in a box" notation [()]-->
+<div>
+    <label for="bananaInABox"> The [(ngModel)] way: </label>
+    <input name="bananaInABox" type="text" [(ngModel)]="name"/>
+</div>
+
 <button (click)="changeNameColor()"> Change name color </button>

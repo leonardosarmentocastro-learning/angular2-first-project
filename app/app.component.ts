@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: 
-    `
-    <h1>{{title}}</h1>
-    <div [style.color]="nameColor">
-        Hello {{name}}
-    </div>
-    <button (click)="changeNameColor()"> Change name color </button>
-    `
+    templateUrl: "app/app.component.html"
 })
 export class AppComponent { 
     // [ ] PROPERTY BINDING - one way binding from the component to the dom

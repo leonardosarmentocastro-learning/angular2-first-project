@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CustomerComponent } from './customer/customer.component';
+import { CustomersComponent } from './customer/customers.component';
 
 @Component({
     selector: 'my-app',
     templateUrl: "app/app.component.html",
     directives: [
-        CustomerComponent
+        CustomersComponent
     ]
 })
 export class AppComponent { 
@@ -16,19 +16,11 @@ export class AppComponent {
     title = "Customer App";
     name = "Leonardo";
     color = "green";
-    customers: Object[] = [
-        { id: 1, name: "Leonardo"},
-        { id: 2, name: "Sarmento"},
-        { id: 3, name: "John"},
-        { id: 4, name: "Kevin"},
-        { id: 5, name: "Iago"}
-    ];
     view: Object = {
         alert() {
             alert("test");
         }
     };
-
 
     changeColor() {
         this.color = (this.color === "green" ? "red" : "green");

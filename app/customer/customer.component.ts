@@ -12,6 +12,8 @@ export class CustomerComponent implements OnInit {
     // <app-customer [customer]="whateverTheNameOfYourVariable"></app-customer>
     @Input() 
     customer: { id: number, name: string };
+    color: string = "green";
+
 
     constructor() { }
 

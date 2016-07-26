@@ -10,9 +10,6 @@ import { CustomerService } from './customer.service';
     templateUrl: 'customers.component.html',
     directives: [
         CustomerComponent
-    ],
-    providers: [
-        CustomerService
     ]
 })
 export class CustomersComponent implements OnInit {

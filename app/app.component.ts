@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { CustomersComponent } from './customer/customers.component';
+
+// ==> NOTE: instead of importing each thing(compoenent, service or whatever) about the customer
+// import { CustomersComponent } from './customer/customers.component';
+// import { CustomerService } from './customer/customer.service';
+// ==> NOTE:  I can import a hole "barrel" of those things(I can even remove "index" because it's a convention and it would still works):
+// import { CustomersComponent, CustomerService } from "./customer";
+import { CustomersComponent, CustomerService } from "./customer/index";
+
 
 @Component({
     moduleId: module.id,
@@ -7,6 +14,9 @@ import { CustomersComponent } from './customer/customers.component';
     templateUrl: "app.component.html",
     directives: [
         CustomersComponent
+    ], 
+    providers: [
+        CustomerService
     ]
 })
 export class AppComponent { 

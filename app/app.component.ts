@@ -11,9 +11,22 @@ export class AppComponent {
 
     title = "Customer App";
     name = "Leonardo";
-    nameColor = "red";
+    color = "green";
+    customers: Object[] = [
+        { id: 1, name: "Leonardo"},
+        { id: 2, name: "Sarmento"},
+        { id: 3, name: "John"},
+        { id: 4, name: "Kevin"},
+        { id: 5, name: "Iago"}
+    ];
+    view: Object = {
+        alert() {
+            alert("test");
+        }
+    };
 
-    changeNameColor() {
-        this.nameColor = (this.nameColor === "red" ? "blue" : "red");
+
+    changeColor() {
+        this.color = (this.color === "green" ? "red" : "green");
     }
 }

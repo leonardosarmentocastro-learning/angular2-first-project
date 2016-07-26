@@ -1,6 +1,6 @@
 <ul>
     <!-- Do the "async" filter to handle with Observables -->
-    <li *ngFor="let c of customers | async">
+    <li *ngFor="let c of customers">
         <app-customer [customer]="c"></app-customer>
     </li>
 </ul>
